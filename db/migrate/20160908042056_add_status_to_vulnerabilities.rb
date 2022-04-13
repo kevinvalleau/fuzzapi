@@ -1,4 +1,4 @@
-class AddStatusToVulnerabilities < ActiveRecord::Migration
+class AddStatusToVulnerabilities < ActiveRecord::Migration[7.0]
   def change
     add_column :vulnerabilities, :status, :string
   end
