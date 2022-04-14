@@ -25,7 +25,7 @@ Fuzzapi is rails application which uses API_Fuzzer and provide UI solution for g
 
 6. `rails s` to run the server and run `export REDIS_URL=redis://127.0.0.1:6379/0 && bundle exec sidekiq` to run sidekiq.
 
-7. Open `http://localhost:3000` in browser which should point to the application url
+7. Open `http://localhost:4000` in browser which should point to the application url
 
 Fuzzapi comes with `Docker` to simplify installation processing. Following commands will setup application using `Docker`.
 
@@ -39,7 +39,7 @@ Fuzzapi comes with `Docker` to simplify installation processing. Following comma
 
 5. Run `docker-compose up` to run the server.
 
-6. Open `http://localhost:3000` in browser which should point to the application url
+6. Open `http://localhost:4000` in browser which should point to the application url
 
 Fuzzapi uses [API_Fuzzer](https://github.com/lalithr95/API-Fuzzer) gem.
 

@@ -4,15 +4,15 @@ services:
   web:
     build: .
     environment:
-      - REDIS_URL=redis://redis:6379/0
+      - REDIS_URL=redis://localhost:6379/0
     volumes:
       - .:/app
     links:
       - redis
     ports:
-      - "3000:3000"
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rake db:migrate && bundle exec rails s -p 3000 -b '0.0.0.0'"
-
+      - "4000:4000"
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rake db:migrate && bundle exec rails s -p 4000 -b '0.0.0.0'"
+    network_mode: "host"
   sidekiq:
     build: .
     volumes:
@@ -20,6 +20,8 @@ services:
     links:
       - redis
     command: sidekiq -C config/sidekiq.yml
+    network_mode: "host"
 
   redis:
     image: redis
+    network_mode: "host"
