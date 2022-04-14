@@ -5,7 +5,7 @@ threads threads_count, threads_count
 preload_app!
 
 rackup      DefaultRackup  
-port        ENV['PORT']     || 3000  
+port        ENV['PORT']     || 4000  
 environment ENV['RACK_ENV'] || 'development'
 
 # Because we are using preload_app, an instance of our app is created by master process (calling our initializers) and then memory space
